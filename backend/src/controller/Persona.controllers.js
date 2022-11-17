@@ -28,7 +28,7 @@ PersonaCrl.crearPersona = async (req,res) => {
         //encriptar la contraseña
         NuevaPersona.password=await bcrypt.hash(password,10)
         const token =jwt.sign({_id:NuevaPersona._id},"secreto")
-        await NuevaPersona.save()
+        await NuevaPersona.save()//guardar en la bd
 
         res.json({
             mensaje:'Bienvenido',
