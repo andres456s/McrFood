@@ -5,8 +5,9 @@ const jwt = require('jsonwebtoken')
 //funcion crear persona
 PersonaCrl.crearPersona = async (req,res) => {
     
-
     
+
+
     //metodo crear persona
     const{name,email,password}=req.body 
 

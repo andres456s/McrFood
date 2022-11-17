@@ -43,7 +43,7 @@ const Registro =()=> {
 
       Swal.fire({
         icon:'success',
-        title:"Ciudad creada correctamente",
+        title:"Usuario creado correctamente correctamente",
         showConfirmButton:false,
         timer:1500
 

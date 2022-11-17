@@ -1,16 +1,10 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+//requerimientos
+const {Router} = require("express");
+const {defaul:mongoose} = require("mongoose");
+const router =Router()
+const RecetaCrl = require('../controller/Receta.Controllers');
 
-const RecetaSchema = new Schema({
-    title :String,
-    score :String,
-    cooking_time :String,
-    difficulty_level:String,
-    source:String,
-});
+//rutas y endspoints
+router.post("/crearReceta",RecetaCrl.crearReceta)
 
-
-
-
-
-module.exports =   mongoose.model("Receta", RecetaSchema);
+module.exports = router;

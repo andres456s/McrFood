@@ -13,6 +13,7 @@ app.use(bodyParser.json());
 app.use(cors({origen:'*'}));
 //llamamos la api
 app.use('/persona',require('./routes/Persona.routes'))
+app.use('/receta',require('./routes/Receta.Routes'))
 
 app.listen(app.get("Port"), () => {
   console.log('servidor esta escuchando por el puerto app',app.get('Port'))
